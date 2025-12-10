@@ -76,7 +76,7 @@ You can modify the `ModelConfig` class inside `PR-CapsNet.py` to change hyperpar
 class ModelConfig:
     s_dim: int = 9                  # Space-like dimensions
     t_dim: int = 9                  # Time-like dimensions
-    seed: int = 2903                 # Random seed
+    seed: int = 2903                 # Random seed 2903
 ```
 
 ---
@@ -101,10 +101,10 @@ If you find our work useful in your research, please consider citing:
 
 ## 📖 项目简介 (Chinese)
 
-本仓库包含论文 **"PR-CapsNet: Pseudo-Riemannian Capsule Networks"** (PR-CapsNet: 伪黎曼胶囊网络) 的官方 PyTorch 实现。
+本仓库包含论文 **"PR-CapsNet: Pseudo-Riemannian Capsule Networks"** (PR-CapsNet: 伪黎曼胶囊网络) 的实现。
 
 **摘要：**
-PR-CapsNet 提出了一种全新的框架，将胶囊网络推广至 **伪黎曼流形（Pseudo-Riemannian Manifolds）**。通过利用非定签名的度量空间（包含时间维和空间维），我们的模型能够有效地捕捉图数据中复杂的层级结构和异质关系。我们提出了 **自适应曲率路由（ACR）** 机制，并实现了一套数值稳健的指数映射与对数映射算法，确保模型在非欧空间训练时的稳定性。
+现有胶囊网络多基于固定曲率的欧氏或双曲空间，难以有效建模真实图数据中同时存在的层次、聚类与环状等复杂几何结构。为此，我们提出 PR-CapsNet，首次将胶囊路由机制拓展至可学习曲率的伪黎曼流形：通过微分同胚变换构建时空-空间解耦的切空间路由，并引入基于局部流形性质的自适应曲率融合机制，在多个节点与图分类基准上取得 SOTA 性能，同时显著降低计算开销。
 
 📄 **论文链接:** [arXiv:2512.08218](https://arxiv.org/abs/2512.08218)
 
@@ -112,11 +112,11 @@ PR-CapsNet 提出了一种全新的框架，将胶囊网络推广至 **伪黎曼
 
 ## 📂 项目结构
 
-本项目采用单文件实现，便于阅读与复现。所有核心逻辑（几何计算、模型结构、训练引擎）均包含在 `main.py` 中。
+本项目采用单文件实现，便于阅读与复现。所有核心逻辑均包含在 `PR-CapsNet.py` 中。
 
 ```text
 PR-CapsNet/
-├── main.py          # 完整代码实现
+├── PR-CapsNet.py          # 完整代码实现
 └── README.md        # 项目说明
 ```
 
@@ -159,9 +159,9 @@ python PR-CapsNet.py
 如需修改超参数（如维度、数据集、Dropout率），请直接在 `PR-CapsNet.py` 中的 `ModelConfig` 部分进行修改。
 ```python
 class ModelConfig:
-    s_dim: int = 9                  # Space-like dimensions
-    t_dim: int = 9                  # Time-like dimensions
-    seed: int = 2903                 # Random seed
+    s_dim: int = 9                  # 类空间维度
+    t_dim: int = 9                  # 类时间维度
+    seed: int = 2903                 # 随机种子2903
 ```
 ---
 
