@@ -98,7 +98,7 @@ If you find our work useful in your research, please consider citing:
 
 <a name="chinese-description"></a>
 
-## 📖 项目简介 (Chinese)
+## 📖 项目简介
 
 本仓库包含论文 **"PR-CapsNet: Pseudo-Riemannian Capsule Networks"** (PR-CapsNet: 伪黎曼胶囊网络) 的实现。
 
