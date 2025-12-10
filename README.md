@@ -63,18 +63,16 @@ The repository does **not** include datasets to keep the file size minimal.
 To run the experiments (reproducing the results in the paper):
 
 ```bash
-python main.py
+python PR-CapsNet.py
 ```
 
-You can modify the `ModelConfig` class inside `main.py` to change hyperparameters (e.g., dimensions, dropout, dataset):
+You can modify the `ModelConfig` class inside `PR-CapsNet.py` to change hyperparameters (e.g., dimensions, dropout, dataset):
 
 ```python
-# Configuration in main.py
-config = ModelConfig(
-    dataset_name='Cora',
-    s_dim=9, t_dim=9,
-    learnable_curvature=True
-)
+class ModelConfig:
+    s_dim: int = 9                  # Space-like dimensions
+    t_dim: int = 9                  # Time-like dimensions
+    seed: int = 2903                 # Random seed
 ```
 
 ---
@@ -148,14 +146,19 @@ pip install torch_scatter -f https://data.pyg.org/whl/torch-2.0.0+cu118.html
 
 ## 🏃 运行指南
 
-直接运行脚本即可开始训练并复现论文中的实验结果：
+直接运行脚本即可开始训练并得到实验结果：
 
 ```bash
-python main.py
+python PR-CapsNet.py
 ```
 
-如需修改超参数（如维度、数据集、Dropout率），请直接在 `main.py` 中的 `ModelConfig` 部分进行修改。
-
+如需修改超参数（如维度、数据集、Dropout率），请直接在 `PR-CapsNet.py` 中的 `ModelConfig` 部分进行修改。
+```python
+class ModelConfig:
+    s_dim: int = 9                  # Space-like dimensions
+    t_dim: int = 9                  # Time-like dimensions
+    seed: int = 2903                 # Random seed
+```
 ---
 
 ## 📜 引用
