@@ -1,8 +1,8 @@
-# PR-CapsNet: Pseudo-Riemannian Capsule Networks
+# PR-CapsNet: Pseudo-Riemannian Capsule Network with Adaptive Curvature Routing for Graph Learning
 
 [![arXiv](https://img.shields.io/badge/arXiv-2512.08218-b31b1b.svg)](https://arxiv.org/abs/2512.08218)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.11%2B-blue)](https://www.python.org/)
 [![PyG](https://img.shields.io/badge/PyG-2.0%2B-green)](https://www.pyg.org/)
 
 **[English](#english-description) | [简体中文](#chinese-description)**
