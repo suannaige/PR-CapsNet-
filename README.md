@@ -52,7 +52,7 @@ pip install torch_scatter -f https://data.pyg.org/whl/torch-2.0.0+cu118.html
 ```
 
 ### 2. Data Preparation
-The repository does **not** include datasets to keep the file size minimal.
+You can download dataset as follow:
 *   **Automatic Download**: When you run the code for the first time, it will attempt to automatically download datasets (Cora, Citeseer, CoauthorCS, etc.) via PyTorch Geometric into a `./data` folder.
 *   **Manual Download**: If you encounter network issues, please manually download the "Planetoid" or "Coauthor" datasets and place the raw files into the `./data` directory following PyG conventions.
 
@@ -60,7 +60,7 @@ The repository does **not** include datasets to keep the file size minimal.
 
 ## 🏃 Usage
 
-To run the experiments (reproducing the results in the paper):
+To run the experiments:
 
 ```bash
 python PR-CapsNet.py
@@ -103,7 +103,7 @@ If you find our work useful in your research, please consider citing:
 本仓库包含论文 **"PR-CapsNet: Pseudo-Riemannian Capsule Networks"** (PR-CapsNet: 伪黎曼胶囊网络) 的实现。
 
 **摘要：**
-现有胶囊网络多基于固定曲率的欧氏或双曲空间，难以有效建模真实图数据中同时存在的层次、聚类与环状等复杂几何结构。为此，我们提出 PR-CapsNet，首次将胶囊路由机制拓展至可学习曲率的伪黎曼流形：通过微分同胚变换构建时空-空间解耦的切空间路由，并引入基于局部流形性质的自适应曲率融合机制，在多个节点与图分类基准上取得 SOTA 性能，同时显著降低计算开销。
+现有胶囊网络多基于固定曲率的欧氏或双曲空间，难以有效建模真实图数据中同时存在的层次、聚类与环状等复杂几何结构。为此，我们提出 **PR-CapsNet**，首次将胶囊路由机制拓展至可学习曲率的伪黎曼流形：通过微分同胚变换构建时空-空间解耦的切空间路由，并引入基于局部流形性质的自适应曲率融合机制，在多个节点与图分类基准上取得 SOTA 性能，同时显著降低计算开销。
 
 📄 **论文链接:** [arXiv:2512.08218](https://arxiv.org/abs/2512.08218)
 
@@ -141,7 +141,7 @@ pip install torch_scatter -f https://data.pyg.org/whl/torch-2.0.0+cu118.html
 ```
 
 ### 2. 数据集准备
-为了保持仓库轻量化，我们**不提供**原始数据文件。
+数据集可以通过以下操作下载。
 *   **自动下载**：首次运行代码时，程序会通过 PyTorch Geometric 接口自动下载所需数据集（Cora, Citeseer 等）并保存在 `./data` 目录下。
 *   **手动下载**：如果您的网络环境受限，请自行下载 Planetoid 或 Coauthor 数据集，并按 PyG 格式要求放入 `./data` 目录。
 
