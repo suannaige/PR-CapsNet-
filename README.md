@@ -16,7 +16,6 @@ This repository contains the official PyTorch implementation of the paper: **"PR
 **Abstract:**  
 Current capsule networks predominantly rely on Euclidean or hyperbolic spaces with **fixed curvature**, struggling to effectively model complex geometric structures characterized by **coexisting hierarchies, clusters, and cycles** in real-world graph data. To address this, we propose **PR-CapsNet**, which generalizes capsule routing mechanisms to **Pseudo-Riemannian manifolds with learnable curvature** for the first time. Specifically, we construct a **time-space decoupled tangent space routing** via diffeomorphic transformations and introduce an **Adaptive Curvature Routing (ACR)** mechanism based on local manifold properties. Our model achieves **State-of-the-Art (SOTA) performance** on multiple node and graph classification benchmarks while **significantly reducing computational overhead**.
 
----
 📄 **Paper:** [arXiv:2512.08218](https://arxiv.org/abs/2512.08218)
 
 ---
@@ -83,11 +82,14 @@ class ModelConfig:
 If you find our work useful in your research, please consider citing:
 
 ```bibtex
-@article{prcapsnet2025,
-  title={PR-CapsNet: Pseudo-Riemannian Capsule Networks},
-  author={Your Name and Co-authors},
-  journal={arXiv preprint arXiv:2512.08218},
-  year={2025}
+@misc{qin2025prcapsnetpseudoriemanniancapsulenetwork,
+      title={PR-CapsNet: Pseudo-Riemannian Capsule Network with Adaptive Curvature Routing for Graph Learning}, 
+      author={Ye Qin and Jingchao Wang and Yang Shi and Haiying Huang and Junxu Li and Weijian Liu and Tinghui Chen and Jinghui Qin},
+      year={2025},
+      eprint={2512.08218},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2512.08218}, 
 }
 ```
 
@@ -167,10 +169,13 @@ class ModelConfig:
 如果您觉得本工作对您的研究有帮助，请引用我们的论文：
 
 ```bibtex
-@article{prcapsnet2025,
-  title={PR-CapsNet: Pseudo-Riemannian Capsule Networks},
-  author={Your Name and Co-authors},
-  journal={arXiv preprint arXiv:2512.08218},
-  year={2025}
+@misc{qin2025prcapsnetpseudoriemanniancapsulenetwork,
+      title={PR-CapsNet: Pseudo-Riemannian Capsule Network with Adaptive Curvature Routing for Graph Learning}, 
+      author={Ye Qin and Jingchao Wang and Yang Shi and Haiying Huang and Junxu Li and Weijian Liu and Tinghui Chen and Jinghui Qin},
+      year={2025},
+      eprint={2512.08218},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2512.08218}, 
 }
 ```
